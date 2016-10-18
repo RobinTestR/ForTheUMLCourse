@@ -1,30 +1,17 @@
 import java.io.IOException;
 
-import View.Console;
+import Model.Console;
+import Model.Member;
+import View.console1;
 
-/**
- *
- */
-
-/**
- * @author Robin
- *
- */
 public class Main {
 
-	/**
-	 * @param args
-	 */
-	static View.Console startConsole = new View.Console();
-	public static void main(String[] args) {
 
+	public static void main(String[] args) throws IOException {
 
-		try {
-			startConsole.start();
-		} catch (IOException e) {
+		View.console1 startConsole = new View.console1();
 
-			e.printStackTrace();
-		}
+		startConsole.start();
 
 
 	}
@@ -32,3 +19,4 @@ public class Main {
 
 
 }
+

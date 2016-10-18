@@ -19,25 +19,26 @@ public class Member {
 	 private int personalNumber;
 	 private int member_id;
 	 private int numOfBoat;
-	 private int numBerths;
-	 public ArrayList<String>memberInfo = new ArrayList<String>();
+
+
 	 int counter = 0;
 	 int counter2 = 0;
 	 Random rand = new Random();
 	 HashSet<Integer> memberID = new HashSet<Integer>();
 	 UUID randomID = UUID.randomUUID();
-	 private static AtomicLong counter1 = new AtomicLong(0);
+
 	 Boat boat = new Boat();
-	 public ArrayList<String>memberInfo2 = new ArrayList<String>();
-	 public ArrayList<Integer>memberInfo3 = new ArrayList<Integer>();
-	 public ArrayList<Integer>numOfBoats = new ArrayList<Integer>();
+	 public ArrayList<String>memberInfo = new ArrayList<String>(); // Member name
+	 public ArrayList<String>memberInfo2 = new ArrayList<String>(); // Personal Number
+	 public ArrayList<Integer>memberInfo3 = new ArrayList<Integer>(); // Member ID
+	 public ArrayList<Integer>numOfBoats = new ArrayList<Integer>(); // number of boats
 
 
 
 
 
 
-
+	// setters and getters for member info
 	public String getName() {
 		return name;
 	}
@@ -58,7 +59,7 @@ public class Member {
 		this.member_id = member_id;
 	}
 
-	
+
 	public ArrayList<String> getMemberInfo() {
 		return memberInfo;
 	}
@@ -121,24 +122,24 @@ public class Member {
 
 
 
-
+	// sets the UniqueID
 	public int UniqueID(){
 
-		return ++counter;
+		return memberInfo3.size()+1;
 
 	}
-
+	// sets the amount of bots for each user
 	public void setBoats(int numberOfBoats ){
 
 		numOfBoat = numberOfBoats;
 
 	}
-
+	// gets the boats
 	public int getBoats(){
 
 		return numOfBoat;
 	}
-
+	// Add a new boat to a user, by taking the setters and getters from set/getboats methods
 	public void addNewBoat(int ID){
 
 		numOfBoats.set(ID-1, numOfBoats.get(ID-1)+1);

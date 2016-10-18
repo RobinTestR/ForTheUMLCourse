@@ -16,14 +16,15 @@ public class Boat {
 	String boatType;
 	int berthNumber;
 	public int boatIDcounter=0;
+	// Arraylists used to store the boat length, type, a special memberID and a special boatID
 	public ArrayList<Integer>boatLength = new ArrayList<Integer>();
 	public ArrayList<String>typeOfBoats = new ArrayList<String>();
 	public ArrayList<Integer>memberID = new ArrayList<Integer>();
 	public ArrayList<Integer>boatID = new ArrayList<Integer>();
-	
-	
 
 
+
+	// setters and getters to set and get boat info
 	public int getBoatIDcounter() {
 		return boatIDcounter;
 	}
@@ -86,9 +87,10 @@ public class Boat {
 		berthNumber = berthnum;
 
 	}
-	
+
 
 
 
 
 }
+
